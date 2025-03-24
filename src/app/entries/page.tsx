@@ -14,7 +14,7 @@ export default function Entries() {
   }, []);
 
   return (
-      <main className="flex-1 p-6 overflow-auto w-full md:w-auto">
+      <div className="flex-1 p-6 overflow-auto w-full md:w-auto">
         <h2 className="text-2xl font-bold">Journal</h2>
         <p className="text-gray-400">March 2025</p>
         
@@ -32,7 +32,7 @@ export default function Entries() {
             </div>
           )} */}
         </div>
-      </main>
+      </div>
   );
 }
 

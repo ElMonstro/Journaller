@@ -2,7 +2,8 @@ import "~/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
-import SideBar from "../components/sidebar/page";
+
+import { Providers } from "~/app/providers";
 
 export const metadata: Metadata = {
   title: "Journaller",
@@ -15,11 +16,11 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body className="flex h-screen bg-gray-900 text-white">
-        <SideBar />
-        {children}
+      <body className="flex h-screen items-center justify-center bg-gray-900 text-white">
+        <Providers>
+          {children}
+        </Providers>
       </body>
-      
     </html>
   );
 }
