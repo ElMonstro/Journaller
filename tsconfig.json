@@ -40,6 +40,6 @@
     "**/*.cjs",
     "**/*.js",
     ".next/types/**/*.ts"
-  ],
+, "src/app/create-entry"  ],
   "exclude": ["node_modules"]
 }

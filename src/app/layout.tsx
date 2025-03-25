@@ -3,8 +3,6 @@ import "~/styles/globals.css";
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 
-import { Providers } from "~/app/providers";
-
 export const metadata: Metadata = {
   title: "Journaller",
   description: "Reflection app for daily journaling",
@@ -17,9 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body className="flex h-screen bg-gray-900 text-white">
-        <Providers>
           {children}
-        </Providers>
       </body>
     </html>
   );

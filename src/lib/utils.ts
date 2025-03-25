@@ -15,7 +15,7 @@ export function decodeJwtToken(token: string): User {
   return JSON.parse(decoded) as User;
 }
 
-export async function fetchWithAuth(url: string, options?: RequestInit) {
+export async function fetchWithAuth(url: string, options?: RequestInit): Promise<Response> {
   const store = useAuthStore.getState();
   const token = store.token;
 
